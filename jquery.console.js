@@ -44,13 +44,13 @@ for (var i = fns.length - 1; i >= 0; i--)
     var grp = $.type(a[a.length-1]) === 'boolean' ? a.pop() : null;
 
     //if(a[0]) a[0] = getName(this) + a[0];
-    if(grp === true) console.group(a[0]);
+    if(grp === true) window.console.group(a[0]);
     if(a[0] && grp === null)
       if($.browser.msie)
-        console.log(a.join(','));
+        window.console.log(a.join(','));
       else
-        console[type].apply(console, a);
-    if(grp === false) console.groupEnd();
+        window.console[type].apply(console, a);
+    if(grp === false) window.console.groupEnd();
   }
 
   function withOptions(opts) {
@@ -62,7 +62,7 @@ for (var i = fns.length - 1; i >= 0; i--)
   }
 
   var console = function(opts) {
-    opts = $.extend({}, $.console.defaults, opts);
+    opts = $.extend({}, console.defaults, opts);
     return withOptions(opts);
   };
 
