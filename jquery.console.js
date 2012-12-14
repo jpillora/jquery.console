@@ -74,9 +74,9 @@ for (var i = fns.length - 1; i >= 0; i--)
 
   $.extend(console, withOptions(console.defaults));
 
-  if($.fn.console === undefined)
-    $.fn.console = console;
+  if($.console === undefined)
+    $.console = console;
   
-  $.fn.consoleNoConflict = console;
+  $.consoleNoConflict = console;
 
 }(jQuery));
