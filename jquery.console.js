@@ -49,7 +49,7 @@ for (var i = fns.length - 1; i >= 0; i--)
       if($.browser.msie)
         window.console.log(a.join(','));
       else
-        window.console[type].apply(console, a);
+        window.console[type].apply(window.console, a);
     if(grp === false) window.console.groupEnd();
   }
 
