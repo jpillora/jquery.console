@@ -45,7 +45,7 @@
     //if(a[0]) a[0] = getName(this) + a[0];
     if(grp === true) window.console.group(a[0]);
     if(a[0] && grp === null)
-      if($.browser.msie)
+      if(window.navigator.userAgent.indexOf("MSIE") >= 0)
         window.console.log(a.join(','));
       else
         window.console[type].apply(window.console, a);
