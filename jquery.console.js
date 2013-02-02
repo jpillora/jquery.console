@@ -10,8 +10,6 @@
   if(window.console === undefined)
     window.console = { isFake: true };
 
-  if(window.console === undefined)
-    window.console = { isFake: true };
   var fns = ["log","warn","info","group","groupCollapsed","groupEnd"];
   for (var i = fns.length - 1; i >= 0; i--)
     if(window.console[fns[i]] === undefined)
